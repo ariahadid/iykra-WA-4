@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: genai
-        image: gcr.io/YOUR_PROJECT_ID/genai-simple
+        image: 'gcr.io/wa-4-aria/genai-simple'
         ports:
         - containerPort: 80
