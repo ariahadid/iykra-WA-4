@@ -11,8 +11,9 @@ steps:
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['apply', '-f', 'kubernetes/']
     env:
-      - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
-      - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
+      - 'CLOUDSDK_COMPUTE_REGION=asia-southeast1'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=genai-cluster'
 
 images:
   - 'gcr.io/$PROJECT_ID/genai-simple'
+
