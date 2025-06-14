@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: genai-simple
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: genai
+  template:
+    metadata:
+      labels:
+        app: genai
+    spec:
+      containers:
+      - name: genai
+        image: gcr.io/YOUR_PROJECT_ID/genai-simple
+        ports:
+        - containerPort: 80
