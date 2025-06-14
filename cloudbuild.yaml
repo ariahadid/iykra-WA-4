@@ -1,3 +1,6 @@
+options:
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/wa-4-aria/genai-simple', '.']
@@ -13,4 +16,3 @@ steps:
 
 images:
   - 'gcr.io/wa-4-aria/genai-simple'
-
